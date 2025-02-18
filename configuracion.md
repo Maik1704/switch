@@ -64,7 +64,7 @@ Guardar la configuración:
 
 Para guardar los cambios, usa:
 ```shell
-copy running-config startup-config
+Switch# write memory
 ```
 ---
 ### 4. **Pruebas de Configuración**
