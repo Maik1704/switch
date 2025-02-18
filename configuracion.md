@@ -22,7 +22,7 @@
 2. En el menú de dispositivos, selecciona un **switch** y arrástralo al área de trabajo.
 3. Haz clic en el **switch** para acceder a la configuración.
 4. En la ventana emergente, selecciona la pestaña **CLI** (Command Line Interface).
---
+---
 ### 2. **Acceder al CLI (Command Line Interface)**
 
 Una vez que accedas al **CLI**, realiza lo siguiente:
@@ -36,7 +36,7 @@ enable
 ```shell
 configure terminal
 ```
---
+---
 ### 3. **Configuración Básica**
 Ahora, configuraremos lo básico:
 
@@ -66,7 +66,7 @@ Para guardar los cambios, usa:
 ```shell
 write memory
 ```
---
+---
 ### 4. **Pruebas de Configuración**
 Para verificar que la configuración se haya realizado correctamente, usa los siguientes comandos:
 
