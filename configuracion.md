@@ -61,6 +61,14 @@ password Consola123
 login
 ```
 Guardar la configuración:
+Importante: Cuando configures la contraseña en line con 0, debes salir de este modo para volver al modo privilegiado antes de guardar la configuración. Para salir del modo config-line:
+
+Escribe el siguiente comando 2 veces para salir del modo de configuración de línea:
+
+```shell
+exit
+```
+Esto te regresará al modo privilegiado (Switch#), donde podrás ejecutar los comandos de guardado.
 
 Para guardar los cambios, usa:
 ```shell
