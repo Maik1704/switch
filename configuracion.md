@@ -22,7 +22,7 @@
 2. En el menú de dispositivos, selecciona un **switch** y arrástralo al área de trabajo.
 3. Haz clic en el **switch** para acceder a la configuración.
 4. En la ventana emergente, selecciona la pestaña **CLI** (Command Line Interface).
-
+---
 ### 2. **Acceder al CLI (Command Line Interface)**
 
 Una vez que accedas al **CLI**, realiza lo siguiente:
@@ -37,45 +37,47 @@ enable
 configure terminal
 ```
 
-3. Configuración Básica
+### 3. **Configuración Básica**
 Ahora, configuraremos lo básico:
 
 Asignar un nombre al switch:
 
 Para cambiar el nombre del switch, usa el siguiente comando:
-shell
-Copiar
-Switch(config)# hostname Switch1
+```shell
+hostname Switch1
+```
 Configurar una contraseña para acceso privilegiado:
 
 Esta contraseña protegerá el acceso al modo privilegiado:
-shell
-Copiar
-Switch(config)# enable secret MiClaveSegura
+```shell
+enable secret MiClaveSegura
+```
 Configurar una contraseña para acceso a la consola:
 
 Esto protegerá el acceso a la consola del switch:
-shell
-Copiar
-Switch(config)# line con 0
-Switch(config-line)# password Consola123
-Switch(config-line)# login
+```shell
+line con 0
+password Consola123
+login
+```
 Guardar la configuración:
 
 Para guardar los cambios, usa:
-shell
-Copiar
-Switch# write memory
-4. Pruebas de Configuración
+```shell
+write memory
+```
+---
+### 4. **Pruebas de Configuración**
 Para verificar que la configuración se haya realizado correctamente, usa los siguientes comandos:
 
 Verifica el nombre configurado:
+```shell
+show running-config
+```
 
-shell
-Copiar
-Switch# show running-config
 Verifica las contraseñas configuradas:
+```shell
+show startup-config
+```
 
-shell
-Copiar
-Switch# show startup-config
+Con estos pasos, has configurado el switch básico correctamente. Ahora está listo para pasar a configuraciones más avanzadas. Si tienes más preguntas o deseas realizar configuraciones adicionales, sigue con el siguiente nivel de configuración.
