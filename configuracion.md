@@ -64,7 +64,7 @@ Guardar la configuración:
 
 Para guardar los cambios, usa:
 ```shell
-Switch# write memory
+write memory
 ```
 ---
 ### 4. **Pruebas de Configuración**
