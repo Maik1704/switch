@@ -7,7 +7,6 @@
 - **Software de terminal** como **PuTTY** o **Tera Term** (si usas un switch físico).
 - **Conexión a red** en caso de usar un switch virtual en Cisco Packet Tracer.
 
---
 ## Pasos para Configuración Básica de un Switch
 
 ### 1. **Acceder al Switch**
