@@ -63,7 +63,7 @@ login
 Guardar la configuración:
 Importante: Cuando configures la contraseña en line con 0, debes salir de este modo para volver al modo privilegiado antes de guardar la configuración. Para salir del modo config-line:
 
-Escribe el siguiente comando 2 veces para salir del modo de configuración de línea:
+Escribe el siguiente comando para salir del modo de configuración de línea:
 
 ```shell
 exit
