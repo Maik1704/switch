@@ -1,62 +1,82 @@
 # Configuración Básica de un Switch
 
-## Objetivo
-
-Este documento cubre los pasos básicos para configurar un switch, ya sea físico o en simuladores como Cisco Packet Tracer. La configuración incluye aspectos básicos como la asignación de nombre, la configuración de contraseñas y la configuración de puertos.
-
 ## Requisitos
 
-- **Switch físico** o **simulador** como **Cisco Packet Tracer** o **GNS3**.
-- **Cable de consola** para switches físicos o conexión mediante SSH/Telnet para switches remotos.
-- Software de terminal como **PuTTY** o **Tera Term**.
-- Conocimiento básico de comandos CLI (Command Line Interface).
+- **Switch físico** o **simulador Cisco Packet Tracer**.
+- **Cable de consola** (si usas un switch físico).
+- **Software de terminal** como **PuTTY** o **Tera Term** (si usas un switch físico).
+- **Conexión a red** en caso de usar un switch virtual en Cisco Packet Tracer.
 
-## Pasos para Configurar un Switch
+--
+## Pasos para Configuración Básica de un Switch
 
-### 1. **Conexión al Switch**
-- **Con un Switch físico**: Conecta un cable de consola entre el switch y tu PC.
-- **Con Cisco Packet Tracer**: Agrega un switch desde el menú de dispositivos y conéctalo a otros dispositivos de red.
+### 1. **Acceder al Switch**
 
-### 2. **Acceso a la Configuración**
-- **Acceso por consola**: Utiliza un software como **PuTTY** o **Tera Term** para acceder al switch.
-- **Acceso remoto (SSH/Telnet)**: Si el switch ya tiene una IP configurada, puedes acceder mediante SSH o Telnet.
+#### **Con Switch Físico:**
+1. Conecta el **cable de consola** desde el puerto de consola del switch al puerto COM de tu computadora.
+2. Abre el programa **PuTTY** o **Tera Term**.
+3. Selecciona el puerto adecuado (usualmente **COM1** o **COM3**) y haz clic en **Open**.
+4. Verás una terminal donde podrás ingresar los comandos.
 
-### 3. **Configuración Básica**
-Para ingresar al **modo privilegiado** en el switch:
+#### **Con Cisco Packet Tracer:**
+1. Abre **Cisco Packet Tracer**.
+2. En el menú de dispositivos, selecciona un **switch** y arrástralo al área de trabajo.
+3. Haz clic en el **switch** para acceder a la configuración.
+4. En la ventana emergente, selecciona la pestaña **CLI** (Command Line Interface).
+
+### 2. **Acceder al CLI (Command Line Interface)**
+
+Una vez que accedas al **CLI**, realiza lo siguiente:
+
+1. Para acceder al **modo privilegiado**:
 ```shell
 enable
 ```
 
-Accede al modo de configuración:
-
+2. Accede al modo de configuración global:
 ```shell
 configure terminal
 ```
-### 4. **Comandos Básicos**
-Configurar el nombre del switch:
-```shell
-hostname Switch1
-```
-Configurar la contraseña de acceso:
-```shell
-enable secret ClaveSegura123
-```
-Configurar el puerto de consola para contraseñas:
-```shell
-line con 0
-```
-```shell
-password Consola123
-```
-```shell
-login
-```
-### 5. **Pruebas de Configuración**
-Verificar el nombre configurado:
-```shell
-show running-config
-```
-Verificar la configuración de contraseñas:
-```shell
-show startup-config
-```
+
+3. Configuración Básica
+Ahora, configuraremos lo básico:
+
+Asignar un nombre al switch:
+
+Para cambiar el nombre del switch, usa el siguiente comando:
+shell
+Copiar
+Switch(config)# hostname Switch1
+Configurar una contraseña para acceso privilegiado:
+
+Esta contraseña protegerá el acceso al modo privilegiado:
+shell
+Copiar
+Switch(config)# enable secret MiClaveSegura
+Configurar una contraseña para acceso a la consola:
+
+Esto protegerá el acceso a la consola del switch:
+shell
+Copiar
+Switch(config)# line con 0
+Switch(config-line)# password Consola123
+Switch(config-line)# login
+Guardar la configuración:
+
+Para guardar los cambios, usa:
+shell
+Copiar
+Switch# write memory
+4. Pruebas de Configuración
+Para verificar que la configuración se haya realizado correctamente, usa los siguientes comandos:
+
+Verifica el nombre configurado:
+
+shell
+Copiar
+Switch# show running-config
+Verifica las contraseñas configuradas:
+
+shell
+Copiar
+Switch# show startup-config
