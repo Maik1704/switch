@@ -59,46 +59,46 @@ Ahora que hemos configurado las VLANs, es hora de aplicar la configuración bás
 - **Modo Privilegiado:**  
   Este modo te da acceso a los comandos avanzados. Usa el siguiente comando:
   
-  ```bash
-  enable
-  ```
+```bash
+enable
+```
 Modo de Configuración Global:
 Para realizar la configuración global del dispositivo, usa:
 
-    ```bash
-    configure terminal
-    ```
+```bash
+configure terminal
+```
     
 3. **Cambiar el nombre del switch**:  
    Es una buena práctica asignar un nombre único al switch. Usa el siguiente comando:
-   ```bash
-   hostname Prueba1
-   ```
+```bash
+hostname Prueba1
+```
 ![image](https://github.com/user-attachments/assets/b57dbe4d-070d-4585-ac02-46cc53a3396b)
 
   Configurar una contraseña para el modo privilegiado:
 Protege el acceso a los comandos avanzados del switch con una contraseña:
 
-  	```bash
-    enable secret MiClaveSegura
-    ```
+```bash
+enable secret MiClaveSegura
+```
 
   Configurar una contraseña para acceso a la consola:
 Protege el acceso físico al switch configurando una contraseña para la consola:
 
-    ```bash
-    line con 0
-    password Consola123
-    login
-    end
-    ```
+```bash
+line con 0
+password Consola123
+login
+end
+```
 
   Guardar la configuración:
 Para asegurarte de que los cambios se guarden, utiliza el siguiente comando:
 
-    ```bash
-    write memory
-    ```
+```bash
+write memory
+```
 ![image](https://github.com/user-attachments/assets/019d07db-b892-42e0-bd74-214369c5c8aa)
 
 ### 1.3 Asignar Direcciones IP a las PCs
@@ -128,43 +128,43 @@ Ahora configuraremos dos VLANs para separar el tráfico de red.
 
 2. Crea las siguientes VLANs:
    - Para la **VLAN 10** (para **PC 1** y **PC 2**):
-     ```bash
-     vlan 10
-     name VLAN10
-     ```
+```bash
+vlan 10
+name VLAN10
+```
 
    - Para la **VLAN 20** (para **PC 3**):
-     ```bash
-     vlan 20
-     name VLAN20
-     ```
+```bash
+vlan 20
+name VLAN20
+```
 ![image](https://github.com/user-attachments/assets/45547ef6-34dd-43fb-810b-3085c2ecdbbc)
 
 3. Asigna los puertos a las VLANs correspondientes:
    - Asigna el puerto **FastEthernet0/1** y **FastEthernet0/2** a la **VLAN 10**:
-     ```bash
-     interface range FastEthernet0/1 - 2
-     switchport mode access
-     switchport access vlan 10
-     ```
+```bash
+interface range FastEthernet0/1 - 2
+switchport mode access
+switchport access vlan 10
+```
 
    - Asigna el puerto **FastEthernet0/3** a la **VLAN 20**:
-     ```bash
-     Switch1(config)# interface FastEthernet0/3
-     Switch1(config-if)# switchport mode access
-     Switch1(config-if)# switchport access vlan 20
-     ```
+```bash
+interface FastEthernet0/3
+switchport mode access
+switchport access vlan 20
+```
 ![image](https://github.com/user-attachments/assets/57009da7-27d2-415e-b324-230b59d2f7fc)
 
   4. Guardar Configuración
     Una vez que hayas configurado las VLANs y asignado los puertos, guarda la configuración del switch:
 
-  ```bash
-  end
-  ```
-  ```bash
-  write memory
-  ```
+```bash
+end
+```
+```bash
+write memory
+```
 ![image](https://github.com/user-attachments/assets/a77716d9-bbec-48f8-ae55-e87590d1cdea)
 
 Sección 2: Verificación de la Comunicación
