@@ -47,6 +47,7 @@ Antes de comenzar, asegúrate de tener lo siguiente:
    - Conecta **PC 1** al puerto **FastEthernet0/1** del switch.
    - Conecta **PC 2** al puerto **FastEthernet0/2** del switch.
    - Conecta **PC 3** al puerto **FastEthernet0/3** del switch.
+     
 ![image](https://github.com/user-attachments/assets/9082a049-ddde-4a0c-aedd-98996fc5c54c)
 
 ### 1.2 Configuración Básica del Switch
