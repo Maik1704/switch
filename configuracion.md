@@ -1,4 +1,4 @@
-# Guía Completa de Configuración de un Switch en Cisco Packet Tracer
+# Configuración de un Switch en Cisco Packet Tracer
 
 Este README está diseñado para guiarte a través de la configuración de un switch en **Cisco Packet Tracer** y cómo segmentar tu red utilizando **VLANs**. Esta guía está especialmente dirigida a personas que están empezando en el mundo de las redes y que nunca han utilizado Cisco Packet Tracer.
 
